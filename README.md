@@ -1,2 +1,61 @@
-# tcga-brca-multi-omics-analysis
-Multi-omics integration of RNA-seq and DNA methylation data from 873 TCGA breast cancer patients
+#  Multi-Omics Integration Dashboard
+## TCGA Breast Cancer (BRCA) — RNA-seq + DNA Methylation Analysis
+
+Integrated RNA-seq and DNA methylation data from 873 TCGA breast cancer patients 
+to identify epigenetically silenced tumor suppressor genes.
+
+##  Key Results
+| Analysis | Result |
+|----------|--------|
+| Patients analyzed | 873 (multi-omics) |
+| Total genes analyzed | 20,530 |
+| Differentially expressed genes | 4,200 |
+| Upregulated in tumor | 1,495 |
+| Downregulated in tumor | 2,705 |
+| Hypermethylated CpG sites | 15,642 |
+| Epigenetically silenced candidates | 20 |
+| Top silenced gene | LEP (Leptin) |
+
+## Methodology
+TCGA RNA-seq (1218 samples)  +  DNA Methylation (888 samples)
+↓
+873 Common Patients
+↓
+Tumor vs Normal Separation
+↓
+DEG Analysis (t-test + BH correction)
+↓
+Methylation Analysis (β-value difference)
+↓
+Multi-Omics Integration
+↓
+Epigenetically Silenced Gene Identification
+
+
+
+##  Visualizations
+
+![Multi-Omics Summary](multiomics_summary.png)
+
+![Volcano Plot](volcano_plot.png)
+
+![PCA Plot](pca_plot.png)
+
+![Silenced Genes](silenced_genes.png)
+
+![Methylation Distribution](methylation_distribution.png)
+
+##  Tools & Libraries
+- Python, Pandas, NumPy, SciPy
+- Matplotlib, Seaborn, Scikit-learn
+- Jupyter Notebook
+- Data: UCSC Xena (TCGA-BRCA)
+
+##  Key Biological Findings
+- **COL10A1** — most upregulated gene — known cancer invasion marker
+- **LEP (Leptin)** — most silenced gene — known breast cancer tumor suppressor
+- **ADIPOQ** — silenced adiponectin — protective role against breast cancer
+- Tumor and normal samples show clear separation in PCA (28.8% variance explained)
+
+## 👤 Author
+**Sai Tejaswi Gali** — Bioinformatics Student, VFSTR
