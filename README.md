@@ -17,19 +17,14 @@ to identify epigenetically silenced tumor suppressor genes.
 | Top silenced gene | LEP (Leptin) |
 
 ## Methodology
-TCGA RNA-seq (1218 samples)  +  DNA Methylation (888 samples)
-↓
-873 Common Patients
-↓
-Tumor vs Normal Separation
-↓
-DEG Analysis (t-test + BH correction)
-↓
-Methylation Analysis (β-value difference)
-↓
-Multi-Omics Integration
-↓
-Epigenetically Silenced Gene Identification
+
+1. **Data Collection** → TCGA RNA-seq (1,218 samples) + DNA Methylation (888 samples)
+2. **Integration** → Found 873 patients with BOTH data types
+3. **Separation** → Split into Tumor (783) vs Normal (85) samples
+4. **DEG Analysis** → t-test + Benjamini-Hochberg correction across 20,530 genes
+5. **Methylation Analysis** → β-value difference between tumor and normal CpG sites
+6. **Multi-Omics Integration** → Intersected downregulated genes with hypermethylated sites
+7. **Result** → Identified epigenetically silenced tumor suppressor candidates
 
 
 
